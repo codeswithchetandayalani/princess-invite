@@ -1,0 +1,210 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #fff0f5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.kitty-decoration {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bow {
+    width: 30px;
+    height: 20px;
+    background: #ff69b4;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    display: inline-block;
+}
+
+.bow::before,
+.bow::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff69b4;
+    border-radius: 50%;
+    top: 5px;
+}
+
+.bow::before {
+    left: -10px;
+}
+
+.bow::after {
+    right: -10px;
+}
+
+.heart {
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.greeting {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+    color: white;
+}
+
+.no-btn {
+    background: linear-gradient(135deg, #ffc0cb, #ffd1dc);
+    color: #ff69b4;
+}
+
+.details-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 15px;
+    border: 2px dashed #ffb6c1;
+}
+
+.details-section h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff69b4;
+    font-size: 1.8em;
+}
+
+.details-section p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.romantic-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+    color: #ff69b4;
+    margin-top: 20px;
+}
+
+.message {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 15px;
+    border: 2px dashed #ffb6c1;
+}
+
+.message p {
+    font-size: 1.2em;
+    color: #ff69b4;
+    font-family: 'Dancing Script', cursive;
+}
+
+.hidden {
+    display: none;
+}
+
+#noBtn {
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .greeting {
+        font-size: 2em;
+    }
+    
+    .question {
+        font-size: 1em;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .details-section,
+    .message {
+        padding: 15px;
+    }
+    
+    .bow {
+        width: 20px;
+        height: 15px;
+    }
+    
+    .bow::before,
+    .bow::after {
+        width: 10px;
+        height: 10px;
+    }
+}
